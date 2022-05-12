@@ -1,9 +1,10 @@
+const fullBrand = document.querySelector('.repair-brands');
+const isbrandClick = fullBrand.querySelector('.brands_isfull');
 const isbrand = document.querySelector('.brand-close');
 const brandContainer = document.querySelector('.brands');
-const fullBrand = document.querySelector('.repair-brands');
 const brandSpan = fullBrand.querySelector('.isfull-span');
 
-isbrand.addEventListener('click', function() {
+isbrandClick.addEventListener('click', function() {
     console.log('click');
     brandContainer.classList.toggle('brand-closelist');
     isbrand.classList.toggle('rotate-brand');
