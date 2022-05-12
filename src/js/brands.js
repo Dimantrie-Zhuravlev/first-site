@@ -1,7 +1,7 @@
 const isbrand = document.querySelector('.brand-close');
-console.log(isbrand)
 const brandContainer = document.querySelector('.brands');
-const brandSpan = document.querySelector('.brand_isfull')
+const fullBrand = document.querySelector('.repair-brands');
+const brandSpan = fullBrand.querySelector('.isfull-span');
 
 isbrand.addEventListener('click', function() {
     console.log('click');
