@@ -1,0 +1,120 @@
+body {
+    background-color: rgba(248, 248, 248, 1);
+    margin: 0;
+    padding: 0;
+}
+
+.mainContainer {
+    box-sizing: border-box;
+    min-width: 320px;
+    padding: 16px;
+    margin: 0;
+}
+
+.partners-navigation {
+    width: 100%;
+    margin-bottom: 24px;
+}
+
+.nameSector {
+    background-color: white;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #7E7E82;
+    padding: 16px;
+    margin: 0;
+    margin-top: 20px;
+}
+
+.partners .partners__element {
+    display: flex;
+    box-sizing: border-box;
+    height: 72px;
+    background-color: white;
+    border: 1px solid #EAEAEA;
+    border-radius: 6px;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 16px;
+}
+
+.partners__search {
+    width: 40px;
+    height: 40px;
+    background: url('../img/search.svg') no-repeat center;
+    border: none;
+}
+
+.isfullpart {
+    height: 24px;
+    border: none;
+    padding: 0;
+    display: none;
+    cursor: pointer;
+    width: 150px;
+    margin-bottom: 20px;
+}
+
+.isfullpart span {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    display: inline-block;
+    margin-left: 10px;
+}
+
+.isfullpart div {
+    width: 24px;
+    height: 24px;
+    background: url("../img/str.svg") no-repeat center center;
+    display: inline-block;
+}
+
+.rotate180 {
+    transform: rotate(180deg);
+}
+
+.swiper .swiper-pagination {
+    bottom: 0px;
+}
+
+@media (min-width:320px) {
+    .partners {
+        display: flex;
+    }
+    .list-close {
+        height: 100px;
+    }
+}
+
+@media (min-width:768px) {
+    .mainContainer {
+        padding: 24px;
+    }
+    .partners {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 16px 24px;
+    }
+    .isfullpart {
+        display: flex;
+    }
+    .list-close {
+        height: 160px;
+    }
+    .swiper-pagination {
+        display: none;
+    }
+}
+
+@media (min-width:1120px) {
+    .mainContainer {
+        padding: 24px 32px;
+    }
+    .partners {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        gap: 16px 32px;
+    }
+}

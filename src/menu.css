@@ -1,0 +1,149 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: 'TT Lakes';
+}
+
+.container-menu2 {
+    box-sizing: border-box;
+    width: 320px;
+    height: 1024px;
+    margin-right: auto;
+    background-color: white;
+    box-shadow: -2px 0px 4px rgba(69, 79, 126, 0.02), 16px 0px 52px rgba(14, 24, 80, 0.2);
+    padding: 24px;
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    margin-bottom: 50px;
+}
+
+.header-menu2 {
+    display: flex;
+    justify-content: space-between;
+}
+
+.header__circle {
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-top: 8px;
+    background-color: rgba(255, 62, 121, 1);
+    background-position: center center;
+    background-size: 18px 16px;
+    background-repeat: no-repeat;
+    transition-duration: 1s;
+}
+
+.header__circle:hover {
+    transform: scale(1.2);
+    background-color: rgb(0, 162, 255);
+}
+
+.header__circle_cellphone {
+    background-image: url('svg/cellphone.svg');
+}
+
+.header__circle_message {
+    background-image: url('svg/message.svg');
+}
+
+.header__circle_people {
+    background-image: url('svg/people.svg');
+}
+
+.header-menu2__left {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.header__circle_back {
+    background-image: url('svg/back.svg');
+    margin-right: 16px;
+}
+
+.header-menu__cps {
+    border: none;
+    background: white;
+    width: 96px;
+    height: 51px;
+    background-image: url('svg/Group.svg');
+}
+
+.header__circle_search {
+    background-image: url('svg/search.svg');
+}
+
+.menu-navigation li:first-child a {
+    color: #7E7E82;
+}
+
+.menu-navigation li {
+    list-style-type: none;
+    margin: 0;
+    margin-bottom: 32px;
+    color: #1B1C21;
+}
+
+.menu-navigation {
+    padding: 0;
+    margin: 0;
+}
+
+.menu-navigation a {
+    text-decoration: none;
+    color: #1B1C21;
+}
+
+.menu2-service_leftbutton {
+    width: 4px;
+    height: 32px;
+    background: #41F6D7;
+    position: absolute;
+    left: 0;
+    top: 116px;
+}
+
+.bottom_service {
+    display: flex;
+}
+
+.bottom_service div {
+    margin-right: 16px;
+}
+
+.footer-menu2 {
+    margin-top: auto;
+}
+
+.menu-lang {
+    display: flex;
+}
+
+.menu-lang li {
+    list-style-type: none;
+    margin: 0;
+    color: #1B1C21;
+    margin-right: 7px;
+    font-weight: bold;
+}
+
+.menu-lang {
+    padding: 0;
+    margin-top: 40px;
+}
+
+.menu-lang li:first-child {
+    color: #7E7E82;
+}
+
+.phone-number {
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: -0.6px;
+    color: #1B1C21;
+    font-weight: bold;
+}

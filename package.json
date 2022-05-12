@@ -1,0 +1,45 @@
+{
+    "name": "second-macket",
+    "version": "1.0.0",
+    "description": "",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "build": "cross-env NODE_ENV=production webpack --mode production",
+        "dev": "cross-env NODE_ENV=development webpack --mode development",
+        "start": "cross-env NODE_ENV=development webpack serve --mode development"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Dimantrie-Zhuravlev/second-macket.git"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "bugs": {
+        "url": "https://github.com/Dimantrie-Zhuravlev/second-macket/issues"
+    },
+    "homepage": "https://github.com/Dimantrie-Zhuravlev/second-macket#readme",
+    "devDependencies": {
+        "@babel/core": "^7.17.10",
+        "@babel/preset-env": "^7.17.10",
+        "babel-loader": "^8.2.5",
+        "clean-webpack-plugin": "^4.0.0",
+        "copy-webpack-plugin": "^10.2.4",
+        "cross-env": "^7.0.3",
+        "css-loader": "^4.3.0",
+        "file-loader": "^6.2.0",
+        "html-loader": "^3.1.0",
+        "html-webpack-plugin": "^5.5.0",
+        "mini-css-extract-plugin": "^2.6.0",
+        "node-sass": "^7.0.1",
+        "sass": "^1.51.0",
+        "sass-loader": "^12.6.0",
+        "webpack": "^5.72.1",
+        "webpack-cli": "^4.9.2",
+        "webpack-dev-server": "^4.9.0"
+    },
+    "dependencies": {
+        "normalize.css": "^8.0.1"
+    }
+}
