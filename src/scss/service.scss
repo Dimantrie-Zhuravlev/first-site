@@ -110,6 +110,7 @@
 .header__call-back_last {
     display: none;
     align-items: center;
+    white-space: nowrap;
     column-gap: 32px;
     grid-template-columns: 170px 170px;
     div {
