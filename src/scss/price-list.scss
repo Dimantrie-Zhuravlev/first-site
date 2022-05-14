@@ -1,0 +1,86 @@
+.price-list320 {
+    &__container {
+        padding: 16px 8px;
+        @media(min-width: 768px) {
+            display: none;
+        }
+    }
+    &__element {
+        box-sizing: border-box;
+        min-width: 260px;
+        padding: 16px;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        div:first-child {
+            margin-bottom: 16px;
+        }
+        div:nth-child(2) {
+            margin-bottom: 16px;
+        }
+        div:nth-child(3) {
+            display: flex;
+            justify-content: space-between;
+            div:nth-child(2) {
+                align-self: flex-end;
+            }
+        }
+    }
+    &__character {
+        font-size: 14px;
+        line-height: 16px;
+        color: #7E7E82;
+        opacity: 0.72;
+    }
+    &__value {
+        font-size: 14px;
+        line-height: 18px;
+        letter-spacing: 0.2px;
+        color: rgba(27, 28, 33, 1);
+    }
+    .price_button {
+        color: white;
+        width: 119px;
+        height: 32px;
+        border: none;
+        padding: 4px 12px;
+        text-align: left;
+        border-radius: 16px;
+        background: #FF3E79 url('../img/goside.svg') no-repeat 90% center;
+        span {
+            font-size: 12px;
+            line-height: 24px;
+            text-transform: uppercase;
+        }
+    }
+    &__block {
+        padding-bottom: 40px;
+    }
+}
+
+.price-list768 {
+    padding: 24px;
+    @media(min-width: 320px) {
+        display: none;
+    }
+    @media(min-width: 768px) {
+        display: block;
+    }
+    table {
+        background-color: white;
+        border-spacing: 24px;
+        white-space: nowrap;
+        border-collapse: collapse;
+    }
+    td {
+        padding: 16px;
+        border-bottom: 1px solid #EAEAEA;
+    }
+    td:last-child {
+        border-bottom: none;
+    }
+    th {
+        padding: 16px;
+        text-align: left;
+    }
+}
