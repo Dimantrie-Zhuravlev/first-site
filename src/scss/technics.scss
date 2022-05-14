@@ -1,0 +1,32 @@
+.technics-element {
+    box-sizing: border-box;
+    min-width: 240px;
+    height: 160px;
+    background-color: white;
+    border: 1px solid #EAEAEA;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 6px;
+    padding: 16px;
+    @media (min-width: 768px) {
+        min-width: 224px;
+    }
+    @media (min-width: 1120px) {
+        min-width: 240px;
+    }
+    .search-continueT {
+        align-self: flex-end;
+        width: 40px;
+        height: 40px;
+        background: url('../img/search2.svg') no-repeat center center;
+        border: 2px solid rgba(255, 62, 121, 1);
+        border-radius: 50%;
+    }
+}
+
+.technic_closebrands {
+    @media (min-width: 768px) {
+        height: 150px;
+        overflow: hidden;
+    }
+}

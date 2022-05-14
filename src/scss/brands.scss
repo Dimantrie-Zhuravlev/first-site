@@ -1,4 +1,4 @@
-.repair-brands {
+.repair {
     &__name {
         padding: 16px;
         border-top: 1px solid rgba(217, 255, 245, 1);
@@ -18,14 +18,19 @@
         padding: 16px;
         display: flex;
         overflow: auto;
+        margin-bottom: 34px;
         &::-webkit-scrollbar {
             width: 0;
+            padding: 24px;
         }
         @media (min-width: 768px) {
             overflow: visible;
             display: block;
         }
-        .brands_isfull {
+        @media (min-width: 768px) {
+            padding: 24px 32px;
+        }
+        .isfull_container {
             display: none;
             @media (min-width: 768px) {
                 display: flex;
@@ -49,7 +54,14 @@
     }
 }
 
-.brand {
+.brands_closebrands {
+    @media (min-width: 768px) {
+        height: 150px;
+        overflow: hidden;
+    }
+}
+
+.brands__element {
     box-sizing: border-box;
     min-width: 240px;
     height: 72px;
@@ -74,15 +86,9 @@
         border: 2px solid rgba(255, 62, 121, 1);
         border-radius: 50%;
     }
-    &-closelist {
-        @media (min-width: 768px) {
-            height: 150px;
-            overflow: hidden;
-        }
-    }
 }
 
-.rotate-brand {
+.rotate-element {
     transform: rotate(180deg);
 }
 

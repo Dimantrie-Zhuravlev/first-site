@@ -1,12 +1,14 @@
 const fullBrand = document.querySelector('.repair-brands');
-const isbrandClick = fullBrand.querySelector('.brands_isfull');
-const isbrand = document.querySelector('.brand-close');
-const brandContainer = document.querySelector('.brands');
-const brandSpan = fullBrand.querySelector('.isfull-span');
+const containerBr = fullBrand.querySelector('.brands');
+const isfullBr = fullBrand.querySelector('.isfull_container');
+const isfullElemBr = fullBrand.querySelector('.isfull-element');
+const isfullSpanBr = fullBrand.querySelector('.isfull-span');
 
-isbrandClick.addEventListener('click', function() {
-    console.log('click');
-    brandContainer.classList.toggle('brand-closelist');
-    isbrand.classList.toggle('rotate-brand');
-    if (isbrand.classList.contains('rotate-brand')) { brandSpan.textContent = 'Скрыть' } else { brandSpan.textContent = 'Показать все' }
+
+isfullBr.addEventListener('click', function() {
+    isfullElemBr.classList.toggle('rotate-element');
+    if (isfullElemBr.classList.contains('rotate-element')) {
+        isfullSpanBr.textContent = 'Скрыть'
+    } else { isfullSpanBr.textContent = 'Показать все' };
+    containerBr.classList.toggle('brands_closebrands');
 })
