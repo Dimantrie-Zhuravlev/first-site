@@ -17,7 +17,7 @@ function mobileSlider() {
             });
 
         }
-        if (window.innerWidth > 767 && slider[i].classList.contains('swiper-initialized')) mySwiper[i].destroy();
+        if (window.innerWidth > 767 && slider[i].classList.contains('swiper-initialized')) mySwiper.destroy();
     }
 }
 

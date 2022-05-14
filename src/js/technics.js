@@ -6,7 +6,6 @@ const isfullSpanTec = fulltech.querySelector('.isfull-span');
 
 
 isfullTec.addEventListener('click', function() {
-    console.log('все работает');
     isfullElemTec.classList.toggle('rotate-element');
     if (isfullElemTec.classList.contains('rotate-element')) {
         isfullSpanTec.textContent = 'Скрыть'
