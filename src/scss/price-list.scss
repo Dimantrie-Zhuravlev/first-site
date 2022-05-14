@@ -1,6 +1,6 @@
 .price-list320 {
     &__container {
-        padding: 16px 8px;
+        padding: 16px 8px 0 8px;
         @media(min-width: 768px) {
             display: none;
         }
@@ -59,28 +59,83 @@
 }
 
 .price-list768 {
-    padding: 24px;
-    @media(min-width: 320px) {
+    max-width: 100%;
+    @media(min-width: 0px) {
         display: none;
     }
     @media(min-width: 768px) {
         display: block;
+        padding: 24px 24px;
+    }
+    @media(min-width:1440px) {
+        display: block;
+        padding: 32px 32px;
+    }
+    tr {
+        height: 64px;
     }
     table {
+        width: 100%;
         background-color: white;
-        border-spacing: 24px;
+        border-spacing: auto;
         white-space: nowrap;
         border-collapse: collapse;
     }
-    td {
-        padding: 16px;
+    td,
+    th {
+        padding: 16px 0 16px 24px;
         border-bottom: 1px solid #EAEAEA;
+        // border-bottom: 1px solid #EAEAEA;
     }
     td:last-child {
-        border-bottom: none;
+        padding-right: 16px;
     }
     th {
-        padding: 16px;
         text-align: left;
+        font-size: 14px;
+        line-height: 16px;
+        color: #7E7E82;
+        opacity: 0.72;
+    }
+    tr:first-child th {
+        background-color: #F8F8F8;
+        border-bottom: none;
+    }
+    tr:last-child td {
+        border-bottom: none;
+    }
+    tr td:last-child {
+        text-align: right;
+    }
+}
+
+.price-info {
+    padding: 0 16px;
+    @media(min-width: 768px) {
+        padding: 0 24px;
+        max-width: 60%;
+    }
+    @media(min-width: 1440px) {
+        padding: 32px;
+        max-width: 40%;
+    }
+    p:first-child {
+        font-size: 14px;
+        line-height: 20px;
+        letter-spacing: 0.2px;
+        color: #1B1C21;
+    }
+    p:last-child {
+        font-size: 16px;
+        line-height: 24px;
+        font-weight: 700;
+        letter-spacing: -0.2px;
+        color: #1B1C21;
+        button {
+            border: none;
+            width: 24px;
+            height: 24px;
+            background: url('../img/more.svg') no-repeat center 7.5px;
+        }
     }
 }
