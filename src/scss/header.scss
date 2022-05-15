@@ -39,6 +39,7 @@
         background-size: 18px 16px;
         background-repeat: no-repeat;
         border: none;
+        cursor: pointer;
         &_tools {
             background-image: url('../img/tool.svg');
         }
@@ -59,6 +60,9 @@
         }
         &_back {
             background-image: url('../img/back.svg');
+            @media(min-width: 1440px) {
+                display: none;
+            }
         }
     }
     &__circle:hover {
@@ -92,7 +96,7 @@
             border-radius: 1px;
         }
     }
-    @media (min-width:1120px) {
+    @media (min-width:1440px) {
         display: none;
     }
 }

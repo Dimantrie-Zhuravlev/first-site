@@ -1,14 +1,30 @@
 @import "perem";
 .menu {
+    top: 0;
+    left: -320px;
+    display: none;
     box-sizing: border-box;
     width: 100%;
     max-width: 320px;
     margin-right: auto;
+    height: 100%;
+    z-index: 50;
     background-color: $white;
     box-shadow: -2px 0px 4px $shadowMenu1, 16px 0px 52px $shadowMenu2;
-    max-height: 1024px;
-    display: flex;
-    flex-direction: column;
+    @media (min-width: 360px) {
+        max-width: 360px;
+        position: absolute;
+    }
+    @media (min-width: 768px) {
+        max-width: 320px;
+    }
+    @media (min-width: 1440px) {
+        box-shadow: none;
+        display: block;
+        position: static;
+        order: 0;
+        height: auto;
+    }
     &-header {
         justify-self: flex-start;
         height: 60px;
@@ -25,10 +41,22 @@
             padding: 8px 0;
         }
     }
+    &__height {
+        height: 1000px;
+        display: flex;
+        flex-direction: column;
+        align-items: space-between;
+        @media (min-width: 320px) {
+            height: 676px;
+        }
+        @media (min-width: 768px) {
+            height: 1024px;
+        }
+    }
     &__container {
         background-color: inherit;
         padding: 24px 32px;
-        margin-bottom: 8px;
+        margin-bottom: auto;
         justify-self: flex-start;
         ul {
             list-style: none;
@@ -58,7 +86,6 @@
         }
     }
     &-footer {
-        justify-self: flex-end;
         padding: 0 24px 32px 24px;
         &__call-back {
             display: flex;
@@ -106,64 +133,37 @@
                 background-color: $langBack;
             }
         }
+        .language li {
+            cursor: pointer;
+        }
+    }
+    &-transform {
+        display: block;
+        animation-name: transformMenu;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+    &-transformOpen {
+        display: block;
+        animation-name: transformMenu;
+        animation-duration: 2s;
+        animation-fill-mode: forwards;
+    }
+    // &-transformClose {
+    //     animation-name: transformMenuCl;
+    //     animation-duration: 2s;
+    //     animation-fill-mode: forwards;
+    // }
+}
+
+@keyframes transformMenu {
+    100% {
+        transform: translateX(320px)
     }
 }
 
-// .menu-navigation li:first-child a {
-//     color: #7E7E82;
-// }
-// .menu-navigation li {
-//     list-style-type: none;
-//     margin: 0;
-//     margin-bottom: 32px;
-//     color: #1B1C21;
-// }
-// .menu-navigation {
-//     padding: 0;
-//     margin: 0;
-// }
-// .menu-navigation a {
-//     text-decoration: none;
-//     color: #1B1C21;
-// }
-// .menu2-service_leftbutton {
-//     width: 4px;
-//     height: 32px;
-//     background: #41F6D7;
-//     position: absolute;
-//     left: 0;
-//     top: 116px;
-// }
-// .bottom_service {
-//     display: flex;
-// }
-// .bottom_service div {
-//     margin-right: 16px;
-// }
-// .footer-menu2 {
-//     margin-top: auto;
-// }
-// .menu-lang {
-//     display: flex;
-// }
-// .menu-lang li {
-//     list-style-type: none;
-//     margin: 0;
-//     color: #1B1C21;
-//     margin-right: 7px;
-//     font-weight: bold;
-// }
-// .menu-lang {
-//     padding: 0;
-//     margin-top: 40px;
-// }
-// .menu-lang li:first-child {
-//     color: #7E7E82;
-// }
-// .phone-number {
-//     font-size: 24px;
-//     line-height: 32px;
-//     letter-spacing: -0.6px;
-//     color: #1B1C21;
-//     font-weight: bold;
+// @keyframes transformMenuCl {
+//     100% {
+//         transform: translateX(-320px)
+//     }
 // }

@@ -8,8 +8,21 @@
 @import "footer";
 @import "menu";
 body {
+    position: relative;
     margin: 0;
     padding: 0;
     background-color: $grayBack;
     font-family: 'TT Lakes Regular';
+    @media(min-width: 1440px) {
+        position: static;
+        display: flex;
+    }
+    main {
+        order: 1
+    }
+}
+
+.main-dark {
+    // background: rgba(0, 0, 0, 1);
+    filter: blur(15px);
 }

@@ -1,10 +1,16 @@
 let menu = document.querySelector('.menu'); //общий контейнер меню
+let main = document.querySelector('main');
 let langMenu = menu.querySelector('.language'); //список языков(контейнер)
 let allLang = langMenu.querySelectorAll('li'); //все языки
 //для языков
 let menuLink = menu.querySelector('.menu__container');
 let menuLinks = menuLink.querySelector('ul');
 let menuLinksAll = menuLinks.querySelector('li');
+//ниже для выдвижения меню
+let header = document.querySelector('.header');
+let burger = header.querySelector('.header__menu_burger');
+let closeMenu = menu.querySelector('.header__circle_back');
+
 
 //Сделаем делегирование на смену языка
 langMenu.addEventListener('click', function(event) {
@@ -22,3 +28,11 @@ menuLinks.addEventListener('click', function(event) {
     }
 });
 //а тут (выше) отмена перехода по ссылке по умолчанию
+burger.addEventListener('click', function(event) {
+    menu.classList.add('menu-transformOpen');
+    main.classList.add('main-dark');
+})
+closeMenu.addEventListener("click", function(event) {
+    menu.classList.remove('menu-transformOpen');;
+    main.classList.remove('main-dark')
+})

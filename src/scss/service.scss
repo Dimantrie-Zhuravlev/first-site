@@ -126,7 +126,7 @@
         display: inline-block;
         margin-right: 10px;
     }
-    @media (min-width: 1120px) {
+    @media (min-width: 1440px) {
         display: grid;
     }
 }
@@ -179,6 +179,7 @@
     li:hover {
         border-color: $linkHover;
         background-color: $white;
+        cursor: pointer;
     }
     &__container {
         display: flex;
