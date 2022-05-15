@@ -1,0 +1,169 @@
+@import "perem";
+.menu {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 320px;
+    margin-right: auto;
+    background-color: $white;
+    box-shadow: -2px 0px 4px $shadowMenu1, 16px 0px 52px $shadowMenu2;
+    max-height: 1024px;
+    display: flex;
+    flex-direction: column;
+    &-header {
+        justify-self: flex-start;
+        height: 60px;
+        padding: 12px 24px;
+        display: flex;
+        justify-content: space-between;
+        &__escape {
+            display: grid;
+            grid-template-columns: 40px 1fr;
+            column-gap: 16px;
+            align-items: center;
+        }
+        &__search {
+            padding: 8px 0;
+        }
+    }
+    &__container {
+        background-color: inherit;
+        padding: 24px 32px;
+        margin-bottom: 8px;
+        justify-self: flex-start;
+        ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            li {
+                position: relative;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                margin-bottom: 24px;
+                 :hover::before {
+                    content: '';
+                    width: 4px;
+                    height: 32px;
+                    background: $pointGr;
+                    position: absolute;
+                    left: -32px;
+                    top: -4px;
+                }
+                a {
+                    font-weight: 700;
+                    text-decoration: none;
+                    color: $mainText1;
+                }
+            }
+        }
+    }
+    &-footer {
+        justify-self: flex-end;
+        padding: 0 24px 32px 24px;
+        &__call-back {
+            display: flex;
+            justify-content: flex-start;
+            button {
+                display: block;
+                margin-right: 16px;
+            }
+            button:last-child {
+                margin-right: 0px;
+            }
+        }
+        &__mail {
+            font-size: 16px;
+            line-height: 24px;
+            letter-spacing: -0.2px;
+            color: $vspText;
+            margin-bottom: 12px;
+        }
+        &__phone {
+            font-size: 24px;
+            line-height: 32px;
+            letter-spacing: -0.6px;
+            color: $mainText1;
+            font-weight: 700;
+            margin-bottom: 40px;
+        }
+        ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            li {
+                margin-right: 7px;
+                text-transform: uppercase;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: -0.2px;
+                color: $mainText1;
+            }
+            .language_active {
+                //цвет активного языка
+                color: $linkText;
+                border: 0.5px solid $salat;
+                background-color: $langBack;
+            }
+        }
+    }
+}
+
+// .menu-navigation li:first-child a {
+//     color: #7E7E82;
+// }
+// .menu-navigation li {
+//     list-style-type: none;
+//     margin: 0;
+//     margin-bottom: 32px;
+//     color: #1B1C21;
+// }
+// .menu-navigation {
+//     padding: 0;
+//     margin: 0;
+// }
+// .menu-navigation a {
+//     text-decoration: none;
+//     color: #1B1C21;
+// }
+// .menu2-service_leftbutton {
+//     width: 4px;
+//     height: 32px;
+//     background: #41F6D7;
+//     position: absolute;
+//     left: 0;
+//     top: 116px;
+// }
+// .bottom_service {
+//     display: flex;
+// }
+// .bottom_service div {
+//     margin-right: 16px;
+// }
+// .footer-menu2 {
+//     margin-top: auto;
+// }
+// .menu-lang {
+//     display: flex;
+// }
+// .menu-lang li {
+//     list-style-type: none;
+//     margin: 0;
+//     color: #1B1C21;
+//     margin-right: 7px;
+//     font-weight: bold;
+// }
+// .menu-lang {
+//     padding: 0;
+//     margin-top: 40px;
+// }
+// .menu-lang li:first-child {
+//     color: #7E7E82;
+// }
+// .phone-number {
+//     font-size: 24px;
+//     line-height: 32px;
+//     letter-spacing: -0.6px;
+//     color: #1B1C21;
+//     font-weight: bold;
+// }

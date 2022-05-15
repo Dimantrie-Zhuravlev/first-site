@@ -57,6 +57,9 @@
             display: none;
             background-image: url('../img/people.svg');
         }
+        &_back {
+            background-image: url('../img/back.svg');
+        }
     }
     &__circle:hover {
         background-color: $salat;

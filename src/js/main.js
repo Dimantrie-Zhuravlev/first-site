@@ -6,6 +6,7 @@
 
 import "../scss/main.scss";
 
+import "./menu.js";
 import "./swiper.js";
 import "./brands.js";
 import "./technics.js";
