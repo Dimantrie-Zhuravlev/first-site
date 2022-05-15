@@ -1,8 +1,9 @@
+@import "perem";
 .repair {
     &__name {
         padding: 16px;
-        border-top: 1px solid rgba(217, 255, 245, 1);
-        background-color: white;
+        border-top: 1px solid $whiteGreen;
+        background-color: $white;
         h2 {
             margin: 0;
             padding: 0;
@@ -11,7 +12,7 @@
             line-height: 24px;
             letter-spacing: -0.2px;
             text-transform: uppercase;
-            color: #7E7E82;
+            color: $mainText2;
         }
     }
     &__container {
@@ -65,14 +66,17 @@
     box-sizing: border-box;
     min-width: 240px;
     height: 72px;
-    background-color: white;
-    border: 1px solid #EAEAEA;
+    background-color: $white;
+    border: 1px solid $elemBord;
     border-radius: 6px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px;
     min-width: 0;
+    &:hover {
+        border: 1px solid $blueHover;
+    }
     @media (min-width: 768px) {
         min-width: 224px;
     }
@@ -83,8 +87,12 @@
         width: 40px;
         height: 40px;
         background: url('../img/search2.svg') no-repeat center center;
-        border: 2px solid rgba(255, 62, 121, 1);
+        border: 2px solid $pink;
         border-radius: 50%;
+        &:hover {
+            background-color: $salat;
+            border: 0.5px solid $pink;
+        }
     }
 }
 
@@ -96,6 +104,6 @@
     width: 14px;
     height: 14px;
     &-active {
-        background-color: green;
+        background-color: $pagination;
     }
 }

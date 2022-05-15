@@ -1,3 +1,4 @@
+@import "perem";
 .service {
     padding: 24px 16px;
     position: relative;
@@ -20,14 +21,14 @@
         left: 0px;
         width: 4px;
         height: 40px;
-        background-color: rgba(65, 246, 215, 1);
+        background-color: $pointGr;
         @media (min-width: 1120px) {
             top: 42px;
         }
     }
     h1 {
         margin: 0;
-        color: rgba(27, 28, 33, 1);
+        color: $mainText1;
         font-weight: 700;
         font-size: 28px;
         line-height: 40px;
@@ -40,7 +41,7 @@
         }
     }
     &-info__text {
-        color: #1B1C21;
+        color: $vspText;
         font-size: 14px;
         line-height: 18px;
         letter-spacing: 0.2px;
@@ -168,7 +169,7 @@
             margin-right: 12px;
         }
         a {
-            color: rgba(126, 126, 130, 1);
+            color: $linkText;
             text-decoration: none;
         }
     }
@@ -176,8 +177,8 @@
         margin-right: 0;
     }
     li:hover {
-        border-color: rgba(184, 255, 236, 1);
-        background-color: white;
+        border-color: $linkHover;
+        background-color: $white;
     }
     &__container {
         display: flex;

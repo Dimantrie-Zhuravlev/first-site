@@ -1,12 +1,13 @@
+@import "perem";
 .header {
-    border-bottom: 1px solid rgba(217, 255, 245, 1);
+    border-bottom: 1px solid $whiteGreen;
     min-width: 320px;
     width: 100%;
     height: 88px;
     display: flex;
     box-sizing: border-box;
     justify-content: space-between;
-    background-color: white;
+    background-color: $white;
     padding: 0 16px;
     &__menu {
         display: grid;
@@ -15,7 +16,7 @@
         align-items: center;
         &_cps {
             border: none;
-            background: white;
+            background: $white;
             width: 96px;
             height: 51px;
             background-image: url('../img/Group.svg');
@@ -33,7 +34,7 @@
         width: 40px;
         height: 40px;
         border-radius: 50%;
-        background-color: rgba(255, 62, 121, 1);
+        background-color: $pink;
         background-position: center center;
         background-size: 18px 16px;
         background-repeat: no-repeat;
@@ -58,7 +59,8 @@
         }
     }
     &__circle:hover {
-        background-color: rgb(30, 52, 110)
+        background-color: $salat;
+        border: 0.5px solid $pink;
     }
     &__call-back {
         display: grid;
@@ -83,7 +85,7 @@
             display: block;
             width: 2px;
             height: 32px;
-            background: #EAEAEA;
+            background: $delimiter;
             border-radius: 1px;
         }
     }
