@@ -137,28 +137,32 @@
             cursor: pointer;
         }
     }
-    &-transform {
+    &-close {
         display: block;
-        animation-name: transformMenu;
-        animation-duration: 2s;
+        animation-name: transformMenuCl;
+        animation-duration: 1s;
         animation-fill-mode: forwards;
     }
-    &-transformOpen {
+    &-open {
         display: block;
-        animation-name: transformMenu;
-        animation-duration: 2s;
+        animation-name: transformMenuOp;
+        animation-duration: 1s;
         animation-fill-mode: forwards;
     }
-    // &-transformClose {
-    //     animation-name: transformMenuCl;
-    //     animation-duration: 2s;
-    //     animation-fill-mode: forwards;
-    // }
 }
 
-@keyframes transformMenu {
+@keyframes transformMenuOp {
     100% {
         transform: translateX(320px)
+    }
+}
+
+@keyframes transformMenuCl {
+    0% {
+        transform: translateX(320px)
+    }
+    100% {
+        transform: translateX(0)
     }
 }
 

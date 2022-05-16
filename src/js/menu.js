@@ -10,7 +10,10 @@ let menuLinksAll = menuLinks.querySelector('li');
 let header = document.querySelector('.header');
 let burger = header.querySelector('.header__menu_burger');
 let closeMenu = menu.querySelector('.header__circle_back');
+let menuClear = function() {
 
+    menu.classList.remove('menu-close');
+};
 
 //Сделаем делегирование на смену языка
 langMenu.addEventListener('click', function(event) {
@@ -29,10 +32,13 @@ menuLinks.addEventListener('click', function(event) {
 });
 //а тут (выше) отмена перехода по ссылке по умолчанию
 burger.addEventListener('click', function(event) {
-    menu.classList.add('menu-transformOpen');
+    menu.classList.add('menu-open');
     main.classList.add('main-dark');
 })
 closeMenu.addEventListener("click", function(event) {
-    menu.classList.remove('menu-transformOpen');;
-    main.classList.remove('main-dark')
-})
+    menu.classList.remove('menu-open');
+    menu.classList.add('menu-close');
+    main.classList.remove('main-dark');
+    setTimeout(menuClear, 1000)
+        // menu.classList.add('menu-close');
+});
