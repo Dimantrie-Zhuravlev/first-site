@@ -11,8 +11,10 @@ let header = document.querySelector('.header');
 let burger = header.querySelector('.header__menu_burger');
 let closeMenu = menu.querySelector('.header__circle_back');
 let menuClear = function() {
-
     menu.classList.remove('menu-close');
+};
+let darkList = function() {
+    main.classList.add('main-dark');
 };
 
 //Сделаем делегирование на смену языка
@@ -33,7 +35,7 @@ menuLinks.addEventListener('click', function(event) {
 //а тут (выше) отмена перехода по ссылке по умолчанию
 burger.addEventListener('click', function(event) {
     menu.classList.add('menu-open');
-    main.classList.add('main-dark');
+    setTimeout(darkList, 500);
 })
 closeMenu.addEventListener("click", function(event) {
     menu.classList.remove('menu-open');
@@ -42,3 +44,11 @@ closeMenu.addEventListener("click", function(event) {
     setTimeout(menuClear, 1000)
         // menu.classList.add('menu-close');
 });
+main.addEventListener('click', function(event) {
+    if (menu.classList.contains('menu-open') && main.classList.contains('main-dark')) {
+        menu.classList.remove('menu-open');
+        menu.classList.add('menu-close');
+        main.classList.remove('main-dark');
+        setTimeout(menuClear, 1000)
+    }
+})
