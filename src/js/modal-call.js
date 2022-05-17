@@ -57,6 +57,7 @@ main.addEventListener('click', function(event) {
             callBack.classList.remove('modal-call_open');
             callBack.classList.add('modal-call_close');
             main.classList.remove('main_dark');
+            menu.classList.remove('main_dark');
             setTimeout(callBackClear, 1000)
         }
     }

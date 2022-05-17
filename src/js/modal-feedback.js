@@ -63,6 +63,7 @@ main.addEventListener('click', function(event) {
             feedback.classList.remove('modal-call_open');
             feedback.classList.add('modal-call_close');
             main.classList.remove('main_dark');
+            menu.classList.remove('main_dark');
             setTimeout(callBackClear, 1000)
         }
     }
