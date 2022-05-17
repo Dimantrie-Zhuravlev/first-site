@@ -56,10 +56,13 @@ CloseheaderPhone.addEventListener('click', function(event) {
     setTimeout(callBackClear, 1000)
 })
 main.addEventListener('click', function(event) {
-    if (callBack.classList.contains('modal-call_open')) {
-        callBack.classList.remove('modal-call_open');
-        callBack.classList.add('modal-call_close');
-        main.classList.remove('main_dark');
-        setTimeout(callBackClear, 1000)
+
+    if (headerPhones[0] !== event.target) {
+        if (callBack.classList.contains('modal-call_open')) {
+            callBack.classList.remove('modal-call_open');
+            callBack.classList.add('modal-call_close');
+            main.classList.remove('main_dark');
+            setTimeout(callBackClear, 1000)
+        }
     }
 })
