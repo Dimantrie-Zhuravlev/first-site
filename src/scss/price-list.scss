@@ -38,27 +38,28 @@
         letter-spacing: 0.2px;
         color: $mainText1;
     }
-    .price_button {
-        color: white;
-        width: 119px;
-        height: 32px;
-        border: none;
-        padding: 4px 12px;
-        text-align: left;
-        border-radius: 16px;
-        background: $pinkBut url('../img/goside.svg') no-repeat 90% center;
-        span {
-            font-size: 12px;
-            line-height: 24px;
-            text-transform: uppercase;
-        }
-        &:hover {
-            background-color: $salat;
-            border: 0.5px solid $pink;
-        }
-    }
     &__block {
         padding-bottom: 40px;
+    }
+}
+
+.price_button {
+    color: white;
+    width: 119px;
+    height: 32px;
+    border: none;
+    padding: 4px 12px;
+    text-align: left;
+    border-radius: 16px;
+    background: $pinkBut url('../img/goside.svg') no-repeat 90% center;
+    span {
+        font-size: 12px;
+        line-height: 24px;
+        text-transform: uppercase;
+    }
+    &:hover {
+        background-color: $salat;
+        border: 0.5px solid $pink;
     }
 }
 

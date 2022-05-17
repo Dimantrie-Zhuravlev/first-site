@@ -10,6 +10,7 @@ import "./menu.js";
 import "./swiper.js";
 import "./brands.js";
 import "./technics.js";
+import "./modal-call.js";
 // import "https://unpkg.com/swiper@8/swiper-bundle.min.js"
 
 import "../index.html"

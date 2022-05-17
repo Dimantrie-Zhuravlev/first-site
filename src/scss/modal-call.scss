@@ -1,0 +1,117 @@
+@import "perem";
+.modal-call {
+    box-sizing: border-box;
+    width: 320px;
+    height: 676px;
+    background-color: $white;
+    padding: 24px 16px;
+    position: absolute;
+    //
+    display: none;
+    top: 0;
+    right: -440px;
+    @media(min-width: 1440px) {
+        width: 440px;
+        height: 964px;
+        padding: 40px 32px;
+        z-index: 40;
+    }
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+    button:last-child {
+        align-self: flex-end;
+    }
+    button:first-child {
+        display: visible;
+        margin-bottom: 40px;
+        @media (min-width: 1440px) {
+            position: absolute;
+            left: -105px;
+        }
+    }
+    h2 {
+        position: relative;
+        font-size: 24px;
+        line-height: 32px;
+        letter-spacing: -0.6px;
+        color: $vspText;
+        margin: 0;
+        padding: 0;
+        margin-bottom: 24px;
+        font-weight: 700;
+    }
+    h2:hover::before {
+        position: absolute;
+        content: '';
+        width: 4px;
+        height: 40px;
+        left: -16px;
+        background-color: $pointGr;
+        @media (min-width: 1440px) {
+            left: -32px;
+        }
+    }
+    input {
+        position: relative;
+        box-sizing: border-box;
+        height: 48px;
+        font-size: 16px;
+        line-height: 24px;
+        letter-spacing: -0.2px;
+        color: $blueTextForm;
+        border: 1px solid #EAEAEA;
+        border-radius: 8px;
+        padding: 12px 16px;
+    }
+    p {
+        font-size: 14px;
+        line-height: 16px;
+        color: $linkText;
+        position: relative;
+        span {
+            color: $pink;
+        }
+    }
+    p:hover::before {
+        position: absolute;
+        content: '';
+        width: 4px;
+        height: 80px;
+        left: -16px;
+        background-color: $pointGr;
+        @media (min-width: 1440px) {
+            left: -32px;
+            height: 55px;
+        }
+    }
+    &_close {
+        display: block;
+        animation-name: transformCallCl;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+    &_open {
+        display: block;
+        animation-name: transformCallOp;
+        animation-duration: 1s;
+        animation-fill-mode: forwards;
+    }
+}
+
+@keyframes transformCallOp {
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+@keyframes transformCallCl {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0)
+    }
+}

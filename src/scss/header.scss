@@ -60,9 +60,6 @@
         }
         &_back {
             background-image: url('../img/back.svg');
-            @media(min-width: 1440px) {
-                display: none;
-            }
         }
     }
     &__circle:hover {

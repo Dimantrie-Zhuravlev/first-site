@@ -30,6 +30,9 @@
         position: static;
         order: 0;
         height: auto;
+        .header__circle_back {
+            display: none;
+        }
     }
     &-header {
         justify-self: flex-start;
@@ -161,56 +164,29 @@
             cursor: pointer;
         }
     }
-    &-close {
+    &_close {
         display: block;
-        animation-name: transformMenuCl320;
+        animation-name: transformMenuCl;
         animation-duration: 1s;
         animation-fill-mode: forwards;
-        @media(min-width: 360px) {
-            animation-name: transformMenuCl360;
-        }
-        @media(min-width:768px) {
-            animation-name: transformMenuCl320;
-        }
     }
-    &-open {
+    &_open {
         display: block;
-        animation-name: transformMenuOp320;
+        animation-name: transformMenuOp;
         animation-duration: 1s;
         animation-fill-mode: forwards;
-        @media(min-width: 360px) {
-            animation-name: transformMenuOp360;
-        }
-        @media(min-width:768px) {
-            animation-name: transformMenuOp320;
-        }
     }
 }
 
-@keyframes transformMenuOp360 {
+@keyframes transformMenuOp {
     100% {
-        transform: translateX(360px)
+        transform: translateX(100%);
     }
 }
 
-@keyframes transformMenuCl360 {
+@keyframes transformMenuCl {
     0% {
-        transform: translateX(360px)
-    }
-    100% {
-        transform: translateX(0)
-    }
-}
-
-@keyframes transformMenuOp320 {
-    100% {
-        transform: translateX(320px)
-    }
-}
-
-@keyframes transformMenuCl320 {
-    0% {
-        transform: translateX(320px)
+        transform: translateX(100%)
     }
     100% {
         transform: translateX(0)
