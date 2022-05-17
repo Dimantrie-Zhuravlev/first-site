@@ -6,7 +6,10 @@ let headerPhonesHeader = headerPhones[0];
 let headerPhonesMenu = headerPhones[1];
 
 let main = document.querySelector('main');
-
+let menuClear = function() {
+    menu.classList.remove('menu_close');
+    main.classList.remove('main_heightHidden');
+};
 let callBackClear = function() {
     callBack.classList.remove('modal-call_close');
     main.classList.remove('main_heightHidden');
@@ -29,6 +32,7 @@ for (let i = 0; i < headerPhones.length; i++) {
         callBack.classList.add('modal-call_open');
         setTimeout(darkList, 500);
         main.classList.add('main_heightHidden');
+        setTimeout(menuClear, 1000)
         if (window.innerWidth >= 1439) {
             setTimeout(darkListMenu, 500);
         }
@@ -36,7 +40,7 @@ for (let i = 0; i < headerPhones.length; i++) {
             menu.classList.remove('menu_open');
             menu.classList.add('menu_close');
             main.classList.remove('main_dark');
-            setTimeout(menuClear, 1000)
+            setTimeout(callBackClear, 1000)
 
         }
     })
@@ -50,4 +54,12 @@ CloseheaderPhone.addEventListener('click', function(event) {
         menu.classList.remove('main_dark')
     }
     setTimeout(callBackClear, 1000)
+})
+main.addEventListener('click', function(event) {
+    if (callBack.classList.contains('modal-call_open')) {
+        callBack.classList.remove('modal-call_open');
+        callBack.classList.add('modal-call_close');
+        main.classList.remove('main_dark');
+        setTimeout(callBackClear, 1000)
+    }
 })

@@ -10,12 +10,12 @@
     display: none;
     top: 0;
     right: -320px;
+    z-index: 40;
     @media(min-width: 1440px) {
-        right: -440px;
         width: 440px;
+        right: -440px;
         height: 964px;
         padding: 40px 32px;
-        z-index: 40;
     }
     &__container {
         position: relative;
