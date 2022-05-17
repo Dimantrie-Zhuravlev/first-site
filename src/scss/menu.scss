@@ -18,11 +18,13 @@
         overflow-y: hidden;
     }
     @media (min-width: 360px) {
+        left: -360px;
         max-width: 360px;
     }
     @media (min-width: 768px) {
         max-width: 320px;
         height: 1024px;
+        left: -320px;
     }
     @media (min-width: 1440px) {
         box-shadow: none;
@@ -177,21 +179,15 @@
 
 @keyframes transformMenuOp {
     100% {
-        transform: translateX(320px)
+        transform: translateX(100%)
     }
 }
 
 @keyframes transformMenuCl {
     0% {
-        transform: translateX(320px)
+        transform: translateX(100%)
     }
     100% {
         transform: translateX(0)
     }
 }
-
-// @keyframes transformMenuCl {
-//     100% {
-//         transform: translateX(-320px)
-//     }
-// }
