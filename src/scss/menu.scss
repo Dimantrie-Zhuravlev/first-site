@@ -6,7 +6,6 @@
     box-sizing: border-box;
     width: 100%;
     max-width: 320px;
-    margin-right: auto;
     height: 100%;
     z-index: 50;
     background-color: $white;
@@ -15,7 +14,6 @@
         max-width: 320px;
         position: absolute;
         height: 676px;
-        overflow-y: hidden;
     }
     @media (min-width: 360px) {
         left: -360px;
@@ -165,27 +163,54 @@
     }
     &-close {
         display: block;
-        animation-name: transformMenuCl;
+        animation-name: transformMenuCl320;
         animation-duration: 1s;
         animation-fill-mode: forwards;
+        @media(min-width: 360px) {
+            animation-name: transformMenuCl360;
+        }
+        @media(min-width:768px) {
+            animation-name: transformMenuCl320;
+        }
     }
     &-open {
         display: block;
-        animation-name: transformMenuOp;
+        animation-name: transformMenuOp320;
         animation-duration: 1s;
         animation-fill-mode: forwards;
+        @media(min-width: 360px) {
+            animation-name: transformMenuOp360;
+        }
+        @media(min-width:768px) {
+            animation-name: transformMenuOp320;
+        }
     }
 }
 
-@keyframes transformMenuOp {
+@keyframes transformMenuOp360 {
     100% {
-        transform: translateX(100%)
+        transform: translateX(360px)
     }
 }
 
-@keyframes transformMenuCl {
+@keyframes transformMenuCl360 {
     0% {
-        transform: translateX(100%)
+        transform: translateX(360px)
+    }
+    100% {
+        transform: translateX(0)
+    }
+}
+
+@keyframes transformMenuOp320 {
+    100% {
+        transform: translateX(320px)
+    }
+}
+
+@keyframes transformMenuCl320 {
+    0% {
+        transform: translateX(320px)
     }
     100% {
         transform: translateX(0)
