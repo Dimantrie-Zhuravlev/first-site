@@ -1,16 +1,19 @@
-let headerPhones = document.querySelectorAll(".header__circle_cellphone");
-let callBack = document.querySelector(".modal-call-elem");
-let CloseheaderPhone = callBack.querySelector('.header__circle_back');
+let headerMessage = document.querySelectorAll(".header__circle_message");
+let feedback = document.querySelector(".modal-feedback");
+let CloseheaderMessage = feedback.querySelector('.header__circle_back');
 let menu = document.querySelector('.menu');
-
+let callBack = document.querySelector(".modal-call-elem");
 
 let main = document.querySelector('main');
-let menuClear = function() {
-    menu.classList.remove('menu_close');
-    main.classList.remove('main_heightHidden');
-};
+
 let callBackClear = function() {
     callBack.classList.remove('modal-call_close');
+    feedback.classList.remove('modal-call_close');
+    main.classList.remove('main_heightHidden');
+};
+
+let menuClear = function() {
+    menu.classList.remove('menu_close');
     main.classList.remove('main_heightHidden');
 };
 
@@ -21,10 +24,11 @@ let darkListMenu = function() {
     menu.classList.add('main_dark');
 };
 
-//открытие кола
-for (let i = 0; i < headerPhones.length; i++) {
-    headerPhones[i].addEventListener('click', function(event) {
-        callBack.classList.add('modal-call_open');
+console.log(headerMessage);
+//     //открытие кола
+for (let i = 0; i < headerMessage.length; i++) {
+    headerMessage[i].addEventListener('click', function(event) {
+        feedback.classList.add('modal-call_open');
         setTimeout(darkList, 500);
         main.classList.add('main_heightHidden');
         setTimeout(menuClear, 1000)
@@ -40,22 +44,24 @@ for (let i = 0; i < headerPhones.length; i++) {
         }
     })
 }
-//закрытие кола
-CloseheaderPhone.addEventListener('click', function(event) {
-    callBack.classList.remove('modal-call_open');
-    callBack.classList.add('modal-call_close');
+// //закрытие кола
+
+CloseheaderMessage.addEventListener('click', function(event) {
+    feedback.classList.remove('modal-call_open');
+    feedback.classList.add('modal-call_close');
     main.classList.remove('main_dark');
     if (menu.classList.contains('main_dark')) {
         menu.classList.remove('main_dark')
     }
     setTimeout(callBackClear, 1000)
 })
+
 main.addEventListener('click', function(event) {
 
-    if (headerPhones[0] !== event.target) {
-        if (callBack.classList.contains('modal-call_open')) {
-            callBack.classList.remove('modal-call_open');
-            callBack.classList.add('modal-call_close');
+    if (headerMessage[0] !== event.target) {
+        if (feedback.classList.contains('modal-call_open')) {
+            feedback.classList.remove('modal-call_open');
+            feedback.classList.add('modal-call_close');
             main.classList.remove('main_dark');
             setTimeout(callBackClear, 1000)
         }
