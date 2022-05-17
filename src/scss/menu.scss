@@ -11,12 +11,18 @@
     z-index: 50;
     background-color: $white;
     box-shadow: -2px 0px 4px $shadowMenu1, 16px 0px 52px $shadowMenu2;
+    @media (min-width: 320px) {
+        max-width: 320px;
+        position: absolute;
+        height: 676px;
+        overflow-y: hidden;
+    }
     @media (min-width: 360px) {
         max-width: 360px;
-        position: absolute;
     }
     @media (min-width: 768px) {
         max-width: 320px;
+        height: 1024px;
     }
     @media (min-width: 1440px) {
         box-shadow: none;
@@ -42,15 +48,11 @@
         }
     }
     &__height {
-        height: 1000px;
         display: flex;
         flex-direction: column;
         align-items: space-between;
-        @media (min-width: 320px) {
-            height: 676px;
-        }
         @media (min-width: 768px) {
-            height: 1024px;
+            height: 964px;
         }
     }
     &__container {
@@ -83,10 +85,21 @@
                     color: $mainText1;
                 }
             }
+            li:last-child {
+                margin-bottom: 0px;
+            }
         }
     }
     &-footer {
-        padding: 0 24px 32px 24px;
+        @media (min-width: 320px) {
+            padding: 0 16px 32px 16px;
+        }
+        @media (min-width:360px) {
+            padding: 0 24px 32px 24px;
+        }
+        @media (min-width:1440px) {
+            padding: 0 19px 32px 19px;
+        }
         &__call-back {
             display: flex;
             justify-content: flex-start;
@@ -99,10 +112,13 @@
             }
         }
         &__mail {
+            padding: 0;
+            margin: 0;
             font-size: 16px;
             line-height: 24px;
             letter-spacing: -0.2px;
             color: $vspText;
+            margin-top: 16px;
             margin-bottom: 12px;
         }
         &__phone {
@@ -111,7 +127,15 @@
             letter-spacing: -0.6px;
             color: $mainText1;
             font-weight: 700;
+            margin: 0;
+            padding: 0;
             margin-bottom: 40px;
+            @media (min-width: 320px) {
+                margin-bottom: 8px;
+            }
+            @media (min-width:768px) {
+                margin-bottom: 40px;
+            }
         }
         ul {
             list-style: none;

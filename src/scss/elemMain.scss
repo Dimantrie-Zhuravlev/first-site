@@ -1,0 +1,18 @@
+.main-dark {
+    // background: rgba(0, 0, 0, 1);
+    filter: blur(15px);
+}
+
+main {
+    order: 1
+}
+
+.main-heightHidden {
+    overflow-y: hidden;
+    @media (min-width: 320px) {
+        height: 676px;
+    }
+    @media (min-width:768px) {
+        height: 1024px;
+    }
+}

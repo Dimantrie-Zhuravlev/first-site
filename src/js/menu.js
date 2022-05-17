@@ -12,6 +12,7 @@ let burger = header.querySelector('.header__menu_burger');
 let closeMenu = menu.querySelector('.header__circle_back');
 let menuClear = function() {
     menu.classList.remove('menu-close');
+    main.classList.remove('main-heightHidden');
 };
 let darkList = function() {
     main.classList.add('main-dark');
@@ -36,6 +37,7 @@ menuLinks.addEventListener('click', function(event) {
 burger.addEventListener('click', function(event) {
     menu.classList.add('menu-open');
     setTimeout(darkList, 500);
+    main.classList.add('main-heightHidden');
 })
 closeMenu.addEventListener("click", function(event) {
     menu.classList.remove('menu-open');
