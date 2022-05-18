@@ -5,7 +5,7 @@
 // // import 'https://unpkg.com/swiper@8/swiper-bundle.min.js';
 
 import "../scss/main.scss";
-
+import "./service.js";
 import "./menu.js";
 import "./swiper.js";
 import "./brands.js";

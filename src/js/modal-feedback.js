@@ -24,7 +24,6 @@ let darkListMenu = function() {
     menu.classList.add('main_dark');
 };
 
-console.log(headerMessage);
 //     //открытие кола
 for (let i = 0; i < headerMessage.length; i++) {
     headerMessage[i].addEventListener('click', function(event) {

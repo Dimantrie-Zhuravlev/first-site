@@ -13,6 +13,7 @@ function mobileSlider() {
             },
             width: 240,
             spaceBetween: 16,
+            nested: true, //как раз он отвечает за координацию свайпа и пагинации
         });
         if (window.innerWidth <= 767 && !slider[i].classList.contains('swiper-initialized')) {
             return mySwiper;
